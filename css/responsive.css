@@ -1,11 +1,9 @@
-
 @media (min-width: 990px) {
   .side-bar {
     display: none;
   }
 }
 @media (max-width: 1219px) {
- 
 }
 @media (max-width: 1199px) {
   .section_title {
@@ -18,86 +16,95 @@
 @media (max-width: 990px) {
   .category_list_block {
     width: 31%;
-}
+  }
   nav {
     height: 148px;
-}
+  }
   .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 20px;
   }
- 
+
   html {
     overflow-x: hidden !important;
   }
   .search_wrapp {
-
     margin-top: 14px;
-}
-nav.d-flex.align-items-center {
-  position: fixed;
-  z-index: 99;
-  width: 100%;
-}
-section.banner_home {
+  }
+  nav.d-flex.align-items-center {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+  }
+  section.banner_home {
+    margin-top: 148px;
+  }
+  .padding_top {
+    padding-top: 60px;
+  }
 
-  margin-top: 148px;
-}
-.padding_top {
-  padding-top: 60px;
-}
-
-section {
-  padding-bottom: 60px;
-}
+  section {
+    padding-bottom: 60px;
+  }
 }
 @media (max-width: 767px) {
+  .logo_block img {
+    width: 76px;
+  }
   .three_banner-img img {
     height: 153px;
     object-fit: cover;
-}
+  }
   .delivery_img {
     margin-bottom: 10px;
-}
+  }
   .clocktxt {
-
     font-size: 18px;
     line-height: 28px;
-  
-}
-  span#hours, span#minutes, span#seconds {
+  }
+  span#hours,
+  span#minutes,
+  span#seconds {
     width: 33px;
     height: 33px;
 
-   
     line-height: 33px;
-   
+
     font-size: 16px;
-}
+  }
   div#clock {
     margin-top: 17px;
-}
-
+  }
 
   .category_list_block {
     width: 45%;
-}
-.product_category {
-
-  flex-direction: column;
-}
+  }
+  .product_category {
+    flex-direction: column;
+  }
   nav {
     /* height: 122px; */
+  }
+  .product_category {
+    background: unset;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+  }
+  .category_list-item {
+    left: 0;
+  }
+  .footer_title {
+    margin: 10px 0 7px 0;
+  }
+  section.best_selling .flas_img img {
+    width: 100%;
+    min-height: 165px;
+    max-height: 165px;
+    border: 1px solid rgba(128, 128, 128, 0.21);
+    object-fit: contain;
+  }
 }
-.product_category {
-  background: unset;
- 
-}
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 20px;
-}
-}
-

@@ -1,3 +1,10 @@
+$(document).ready(function () {
+  window.addEventListener("scroll", function () {
+    var nav = document.querySelector("nav");
+    nav.classList.toggle("sticky-bar", window.scrollY > 50);
+  });
+});
+// sticky end
 $(document).ready(function(){
 	$('.category_list').hover(function(){ 
     	$('.category_list-item').show();
@@ -11,18 +18,19 @@ $(document).ready(function() {
 });
 // category show hide end 
 
+                          
 function BindControls() {
   var Countries = ['ARGENTINA', 
-      'AUSTRALIA', 
-      'BRAZIL', 
-      'BELARUS', 
-      'BHUTAN',
-      'CHILE', 
-      'CAMBODIA', 
-      'CANADA', 
-      'DENMARK', 
-      'DOMINICA',
-      'INDIA'];
+      'Man Sunglassess', 
+      'Man Sunglassess', 
+      'Man SunglassessMan SunglassessMan Sunglassess', 
+      'Man Sunglassess',
+      'Man Sunglassess', 
+      'Man Sunglassess', 
+      'Man Sunglassess', 
+      'Man Sunglassess', 
+      'Man Sunglassess',
+      'Man Sunglassess'];
 
   $('#tbCountries').autocomplete({
       source: Countries,
