@@ -47,6 +47,10 @@
   section {
     padding-bottom: 60px;
   }
+  ul#ui-id-1 {
+   
+    width: unset !IMPORTANT;
+}
 }
 @media (max-width: 767px) {
   .logo_block img {
