@@ -1,3 +1,183 @@
+
+(function() {
+
+  var parent = document.querySelector(".range-slider");
+  if(!parent) return;
+
+  var
+    rangeS = parent.querySelectorAll("input[type=range]"),
+    numberS = parent.querySelectorAll("input[type=number]");
+
+  rangeS.forEach(function(el) {
+    el.oninput = function() {
+      var slide1 = parseFloat(rangeS[0].value),
+        	slide2 = parseFloat(rangeS[1].value);
+
+      if (slide1 > slide2) {
+				[slide1, slide2] = [slide2, slide1];
+        // var tmp = slide2;
+        // slide2 = slide1;
+        // slide1 = tmp;
+      }
+
+      numberS[0].value = slide1;
+      numberS[1].value = slide2;
+    }
+  });
+
+  numberS.forEach(function(el) {
+    el.oninput = function() {
+			var number1 = parseFloat(numberS[0].value),
+					number2 = parseFloat(numberS[1].value);
+			
+      if (number1 > number2) {
+        var tmp = number1;
+        numberS[0].value = number2;
+        numberS[1].value = tmp;
+      }
+
+      rangeS[0].value = number1;
+      rangeS[1].value = number2;
+
+    }
+  });
+
+})();
+
+// product list price range end 
+
+let index = 1;
+
+const on = (listener, query, fn) => {
+	document.querySelectorAll(query).forEach(item => {
+		item.addEventListener(listener, el => {
+			fn(el);
+		})
+	})
+}
+
+on('click', '.selectBtn', item => {
+	const next = item.target.nextElementSibling;
+	next.classList.toggle('toggle');
+	next.style.zIndex = index++;
+});
+on('click', '.option', item => {
+	item.target.parentElement.classList.remove('toggle');
+
+	const parent = item.target.closest('.select').children[0];
+	parent.setAttribute('data-type', item.target.getAttribute('data-type'));
+	parent.innerText = item.target.innerText;
+})
+
+// price short end 
+
+const buttons = document.querySelectorAll("button");
+const minValue = 1;
+const maxValue = 10;
+
+buttons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    // 1. Get the clicked element
+    const element = event.currentTarget;
+    // 2. Get the parent
+    const parent = element.parentNode;
+    // 3. Get the number (within the parent)
+    const numberContainer = parent.querySelector(".number");
+    const number = parseFloat(numberContainer.textContent);
+    // 4. Get the minus and plus buttons
+    const increment = parent.querySelector(".plus");
+    const decrement = parent.querySelector(".minus");
+    // 5. Change the number based on click (either plus or minus)
+    const newNumber = element.classList.contains("plus")
+      ? number + 1
+      : number - 1;
+    numberContainer.textContent = newNumber;
+    console.log(newNumber);
+    // 6. Disable and enable buttons based on number value (and undim number)
+    if (newNumber === minValue) {
+      decrement.disabled = true;
+      numberContainer.classList.add("dim");
+      // Make sure the button won't get stuck in active state (Safari)
+      element.blur();
+    } else if (newNumber > minValue && newNumber < maxValue) {
+      decrement.disabled = false;
+      increment.disabled = false;
+      numberContainer.classList.remove("dim");
+    } else if (newNumber === maxValue) {
+      increment.disabled = true;
+      numberContainer.textContent = `${newNumber}+`;
+      element.blur();
+    }
+  });
+});
+
+// input increase end 
+
+$(document).ready(function() {
+
+  $('.slideshow-thumbnails').hover(function() { changeSlide($(this)); });
+
+  $(document).mousemove(function(e) {
+    var x = e.clientX; var y = e.clientY;
+    
+    var x = e.clientX; var y = e.clientY;
+
+    var imgx1 = $('.slideshow-items.active').offset().left;
+    var imgx2 = $('.slideshow-items.active').outerWidth() + imgx1;
+    var imgy1 = $('.slideshow-items.active').offset().top;
+    var imgy2 = $('.slideshow-items.active').outerHeight() + imgy1;
+
+    if ( x > imgx1 && x < imgx2 && y > imgy1 && y < imgy2 ) {
+      $('#lens').show(); $('#result').show();
+      imageZoom( $('.slideshow-items.active'), $('#result'), $('#lens') );
+    } else {
+      $('#lens').hide(); $('#result').hide();
+    }
+
+  });
+  
+});
+
+function imageZoom( img, result, lens ) {
+
+  result.width( img.innerWidth() ); result.height( img.innerHeight() );
+  lens.width( img.innerWidth() / 2 ); lens.height( img.innerHeight() / 2 );
+
+  result.offset({ top: img.offset().top, left: img.offset().left + img.outerWidth() + 10 });
+
+  var cx = img.innerWidth() / lens.innerWidth(); var cy = img.innerHeight() / lens.innerHeight();
+
+  result.css('backgroundImage', 'url(' + img.attr('src') + ')');
+  result.css('backgroundSize', img.width() * cx + 'px ' + img.height() * cy + 'px');
+
+  lens.mousemove(function(e) { moveLens(e); });
+  img.mousemove(function(e) { moveLens(e); });
+  lens.on('touchmove', function() { moveLens(); })
+  img.on('touchmove', function() { moveLens(); })
+
+  function moveLens(e) {
+    var x = e.clientX - lens.outerWidth() / 2;
+    var y = e.clientY - lens.outerHeight() / 2;
+    if ( x > img.outerWidth() + img.offset().left - lens.outerWidth() ) { x = img.outerWidth() + img.offset().left - lens.outerWidth(); }
+    if ( x < img.offset().left ) { x = img.offset().left; }
+    if ( y > img.outerHeight() + img.offset().top - lens.outerHeight() ) { y = img.outerHeight() + img.offset().top - lens.outerHeight(); }
+    if ( y < img.offset().top ) { y = img.offset().top; }
+    lens.offset({ top: y, left: x });
+    result.css('backgroundPosition', '-' + ( x - img.offset().left ) * cx  + 'px -' + ( y - img.offset().top ) * cy + 'px');
+  }
+}
+
+
+function changeSlide(elm) {
+  $('.slideshow-items').removeClass('active');
+  $('.slideshow-items').eq( elm.index() ).addClass('active');
+  $('.slideshow-thumbnails').removeClass('active');
+  $('.slideshow-thumbnails').eq( elm.index() ).addClass('active');
+}
+
+// product detail end 
+// product detail end 
+
 $(document).ready(function () {
   window.addEventListener("scroll", function () {
     var nav = document.querySelector("nav");
