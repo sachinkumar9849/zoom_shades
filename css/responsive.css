@@ -238,5 +238,8 @@ section.product_detail .d-flex.flex-md-row.flex-column.justify-content-between.a
   justify-content: start !important;
   align-items: start !important;
 }
-
+.head-back.d-flex.align-items-center {
+  display: flex;
+  flex-direction: column;
+}
 }

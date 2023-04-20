@@ -619,11 +619,11 @@ hr.custom {
   color: rgb(51, 62, 72);
 }
 
-.flas_content s, .best_selling-content h5 {
+.flas_content s, .best_selling-content h5,.slider_text h3 s {
   font-size: 14px;
   line-height: 22px;
   color: rgb(115, 120, 125);
-  margin-left: 13px;
+  margin-left: 6px;
 }
 
 .slick-slide {
@@ -2083,7 +2083,7 @@ input[type=range]::-ms-thumb {
 }
 input.max_value {
   position: absolute;
-  top: -17px;
+  top: -25px;
   left: 49px;
 }
 input.min_value-round {
