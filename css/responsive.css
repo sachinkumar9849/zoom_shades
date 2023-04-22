@@ -87,7 +87,7 @@
     margin-top: 26px;
   }
   section.cart_page.padding_top-button {
-    margin-top: 106px;
+    margin-top: 0;
   }
   #checkout table tr .t-cart {
     width: 300px;
