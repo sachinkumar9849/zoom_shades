@@ -23,6 +23,9 @@
     />
   </head>
   <body>
+    <div class="menu-btn d-lg-none d-block">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
     <header class="top_header position-relative d-lg-block d-none">
       <div class="container">
         <div class="row">
@@ -32,7 +35,9 @@
             >
               <div class="header_top-left d-flex align-items-center">
                 <div class="header_top-icon">
-                  <a href=""><img src="img/call-2.png" class="img-fluid" alt="" /></a>
+                  <a href=""
+                    ><img src="img/call-2.png" class="img-fluid" alt=""
+                  /></a>
                 </div>
                 <div class="header_top-text">
                   <h4>
@@ -84,17 +89,47 @@
     <nav class="d-flex align-items-center">
       <div class="container">
         <div class="row">
-          <div class="col-lg-2 col-6 order-lg-1 order-1">
+          <div class="col-lg-2 col-12 order-lg-1 order-1 d-flex">
             <div class="logo_block">
-             <a href="index.html"> <img src="img/logo.png" class="img-fluid" alt="" /></a>
+              <a href="index.html">
+                <img src="img/logo.png" class="img-fluid" alt=""
+              /></a>
             </div>
+            <!-- mobile search start  -->
+            <div class="container search_mobile">
+              <div class="search-toggle">
+                <button class="search-icon icon-search">
+                  <i class="fa fa-fw fa-search"></i>
+                </button>
+                <button class="search-icon icon-close">
+                  <i class="fa fa-fw fa-close"></i>
+                </button>
+              </div>
+              <div class="search-container">
+                <form class="d-flex">
+                  <input
+                    type="text"
+                    name="q"
+                    id="search-terms"
+                    placeholder="Search terms..."
+                  />
+                  <button
+                    type="submit"
+                    name="submit"
+                    value="Go"
+                    class="search-icon"
+                  >
+                    <i class="fa fa-fw fa-search"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+            <!-- mobile search end  -->
           </div>
           <div class="col-lg-8 col-12 order-lg-2 order-3">
             <div class="search_wrapp d-flex">
               <div class="position-relative">
-                <ul
-                  class="category_list d-flex justify-content-around"
-                >
+                <ul class="category_list d-flex justify-content-around">
                   <li>
                     <a href="">All categories</a
                     ><img src="img/arrow-down.png" class="img-fluid" alt="" />
@@ -182,8 +217,20 @@
             <div
               class="nav_user d-flex justify-content-end h-100 align-items-center"
             >
-              <a href=""><img src="img/User.png" class="img-fluid" alt="" /></a>
-              <div class="ml-3">
+              <div class="menu-btn d-lg-none d-block">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+              </div>
+              <a href="" class="d-lg-block d-none"
+                ><img src="img/User.png" class="img-fluid" alt=""
+              /></a>
+              <div class="call_icon">
+                <a href=""><span><i class="fa fa-phone" aria-hidden="true"></i> </span></a>
+                <a href="" class="ml-3"
+                  ><img src="img/cart.png" class="img-fluid" alt="" />
+                  <sub>0</sub>
+                </a>
+              </div>
+              <div class="ml-3 d-lg-block d-none">
                 <a href=""
                   ><img src="img/cart.png" class="img-fluid" alt="" />
                   <sub>0</sub>
@@ -194,7 +241,6 @@
         </div>
       </div>
     </nav>
-   
     <section class="banner position-relative py-5">
       <div class="container">
         <ul>
@@ -202,10 +248,7 @@
             <a href="">Home</a>
             <span><img src="img/arrow_right.png" alt="" /></span>
           </li>
-          <li>
-            <a href="">Woman Sunglassess</a>
-            <span><img src="img/arrow_right.png" alt="" /></span>
-          </li>
+          
           <li><span>Woman Sunglassess</span></li>
         </ul>
       </div>
@@ -364,12 +407,21 @@
               <div class="product_detail_text-list">
                 <ul>
                   <h2>About this item</h2>
-                  <li>Here’s the quickest way to enjoy your delicious hot tea every single day.</li>
+                  <li>
+                    Here’s the quickest way to enjoy your delicious hot tea
+                    every single day.
+                  </li>
                   <li>100% BPA - Free premium design meets excellent</li>
                   <li>No more messy accidents or spills</li>
                   <li>So easy & convenient that everyone can use it</li>
-                  <li>This powerful 900-1100-Watt kettle has convenient capacity markings on the body lets you accurately</li>
-                  <li>1 year limited warranty and us-based customer support team lets you buy with confidence.</li>
+                  <li>
+                    This powerful 900-1100-Watt kettle has convenient capacity
+                    markings on the body lets you accurately
+                  </li>
+                  <li>
+                    1 year limited warranty and us-based customer support team
+                    lets you buy with confidence.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -450,7 +502,7 @@
             </a>
           </div>
         </div>
-       
+
         <div class="grid-container mt-5">
           <div class="grid_items">
             <a href="">
@@ -648,9 +700,73 @@
         </div>
       </div>
     </footer>
-     <!-- <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script> -->
-    <!-- <script src="js/jquery-1.12.4.min.js"></script> -->
-    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+    <!-- mobile menu start  -->
+    <div class="side-bar">
+      <header>
+        <div class="close-btn">
+          <i class="fa fa-times"></i>
+        </div>
+      </header>
+      <div class="menu_mobile pt-3">
+       
+      
+        <div class="item">
+          <a class="d-flex justify-conten-between" href="product_list.html"
+            >Man Sunglassess
+            <div class="category_left-icon">
+              <img src="img/arrow_right.png" alt="" /></div
+          ></a>
+        </div>
+        <div class="item">
+          <a class="d-flex justify-conten-between" href="product_list.html"
+            >Kids Sunglassess
+            <div class="category_left-icon">
+              <img src="img/arrow_right.png" alt="" /></div
+          ></a>
+        </div>
+        <div class="item">
+          <a class="d-flex justify-conten-between" href="product_list.html"
+            >Polarized Sunglassess
+            <div class="category_left-icon">
+              <img src="img/arrow_right.png" alt="" /></div
+          ></a>
+        </div>
+        <div class="item">
+          <a class="d-flex justify-conten-between" href="product_list.html"
+            >Blue ray Cut
+            <div class="category_left-icon">
+              <img src="img/arrow_right.png" alt="" /></div
+          ></a>
+        </div>
+      
+        <div class="item">
+          <a class="d-flex justify-conten-between" href="product_list.html"
+            >Green Ray Cut
+            <div class="category_left-icon">
+              <img src="img/arrow_right.png" alt="" /></div
+          ></a>
+        </div>
+        <div class="item">
+          <a class="d-flex justify-conten-between" href="product_list.html"
+            >Woman Sunglassess
+            <div class="category_left-icon">
+              <img src="img/arrow_right.png" alt="" /></div
+          ></a>
+        </div>
+      
+       
+        <div class="item">
+          <a href="" class=""
+                ><img src="img/User.png" class="img-fluid" alt=""
+              />Login</a>
+        </div>
+      
+
+
+       
+      </div>
+    </div>
+    <!-- mobile menu end  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
@@ -663,4 +779,3 @@
     <script src="js/main.js"></script>
   </body>
 </html>
-

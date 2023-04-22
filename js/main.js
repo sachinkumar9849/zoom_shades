@@ -1,4 +1,39 @@
 
+
+
+$(document).ready(function () {
+  //jquery for toggle sub menus
+  $(".sub-btn").click(function () {
+    $(this).next(".sub-menu").slideToggle();
+    $(this).find(".dropdown").toggleClass("rotate");
+  });
+
+  //jquery for expand and collapse the sidebar
+  $(".menu-btn").click(function () {
+    $(".side-bar").addClass("active");
+    $(".menu-btn").css("visibility", "hidden");
+  });
+
+  $(".close-btn").click(function () {
+    $(".side-bar").removeClass("active");
+    $(".menu-btn").css("visibility", "visible");
+  });
+});
+// menu mobile end
+$('.search-toggle').addClass('closed');
+
+$('.search-toggle .search-icon').click(function(e) {
+  if ($('.search-toggle').hasClass('closed')) {
+    $('.search-toggle').removeClass('closed').addClass('opened');
+    $('.search-toggle, .search-container').addClass('opened');
+    $('#search-terms').focus();
+  } else {
+    $('.search-toggle').removeClass('opened').addClass('closed');
+    $('.search-toggle, .search-container').removeClass('opened');
+  }
+});
+
+// search mobile end 
 (function() {
 
   var parent = document.querySelector(".range-slider");

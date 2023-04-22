@@ -23,6 +23,9 @@
     />
   </head>
   <body>
+    <div class="menu-btn d-lg-none d-block">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
     <header class="top_header position-relative d-lg-block d-none">
       <div class="container">
         <div class="row">
@@ -32,7 +35,9 @@
             >
               <div class="header_top-left d-flex align-items-center">
                 <div class="header_top-icon">
-                  <a href=""><img src="img/call-2.png" class="img-fluid" alt="" /></a>
+                  <a href=""
+                    ><img src="img/call-2.png" class="img-fluid" alt=""
+                  /></a>
                 </div>
                 <div class="header_top-text">
                   <h4>
@@ -84,17 +89,47 @@
     <nav class="d-flex align-items-center">
       <div class="container">
         <div class="row">
-          <div class="col-lg-2 col-6 order-lg-1 order-1">
+          <div class="col-lg-2 col-12 order-lg-1 order-1 d-flex">
             <div class="logo_block">
-             <a href="index.html"> <img src="img/logo.png" class="img-fluid" alt="" /></a>
+              <a href="index.html">
+                <img src="img/logo.png" class="img-fluid" alt=""
+              /></a>
             </div>
+            <!-- mobile search start  -->
+            <div class="container search_mobile">
+              <div class="search-toggle">
+                <button class="search-icon icon-search">
+                  <i class="fa fa-fw fa-search"></i>
+                </button>
+                <button class="search-icon icon-close">
+                  <i class="fa fa-fw fa-close"></i>
+                </button>
+              </div>
+              <div class="search-container">
+                <form class="d-flex">
+                  <input
+                    type="text"
+                    name="q"
+                    id="search-terms"
+                    placeholder="Search terms..."
+                  />
+                  <button
+                    type="submit"
+                    name="submit"
+                    value="Go"
+                    class="search-icon"
+                  >
+                    <i class="fa fa-fw fa-search"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+            <!-- mobile search end  -->
           </div>
           <div class="col-lg-8 col-12 order-lg-2 order-3">
             <div class="search_wrapp d-flex">
               <div class="position-relative">
-                <ul
-                  class="category_list d-flex justify-content-around"
-                >
+                <ul class="category_list d-flex justify-content-around">
                   <li>
                     <a href="">All categories</a
                     ><img src="img/arrow-down.png" class="img-fluid" alt="" />
@@ -182,8 +217,20 @@
             <div
               class="nav_user d-flex justify-content-end h-100 align-items-center"
             >
-              <a href=""><img src="img/User.png" class="img-fluid" alt="" /></a>
-              <div class="ml-3">
+              <div class="menu-btn d-lg-none d-block">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+              </div>
+              <a href="" class="d-lg-block d-none"
+                ><img src="img/User.png" class="img-fluid" alt=""
+              /></a>
+              <div class="call_icon">
+                <a href=""><span><i class="fa fa-phone" aria-hidden="true"></i> </span></a>
+                <a href="" class="ml-3"
+                  ><img src="img/cart.png" class="img-fluid" alt="" />
+                  <sub>0</sub>
+                </a>
+              </div>
+              <div class="ml-3 d-lg-block d-none">
                 <a href=""
                   ><img src="img/cart.png" class="img-fluid" alt="" />
                   <sub>0</sub>
@@ -194,7 +241,6 @@
         </div>
       </div>
     </nav>
-   
     <section class="banner position-relative py-5">
       <div class="container">
         <ul>
@@ -267,7 +313,7 @@
                         </th>
                         <th class="text-center">Date</th>
                         <th class="text-center">Product</th>
-                        
+
                         <th class="text-center">Rate</th>
                         <th class="text-center">Quantity</th>
                         <th class="text-center">Total</th>
@@ -284,7 +330,7 @@
                             Ladies Square Half Plastic Black Sunglass
                           </td>
                           <td class="text-center">Rs.1200</td>
-                          
+
                           <td class="text-center">1</td>
                           <td class="text-center">Rs.1200</td>
                         </tr>
@@ -299,7 +345,7 @@
                             Ladies Square Half Plastic Black Sunglass
                           </td>
                           <td class="text-center">Rs.1200</td>
-                          
+
                           <td class="text-center">1</td>
                           <td class="text-center">Rs.1200</td>
                         </tr>
@@ -314,7 +360,7 @@
                             Ladies Square Half Plastic Black Sunglass
                           </td>
                           <td class="text-center">Rs.1200</td>
-                          
+
                           <td class="text-center">1</td>
                           <td class="text-center">Rs.1200</td>
                         </tr>
@@ -329,7 +375,7 @@
                             Ladies Square Half Plastic Black Sunglass
                           </td>
                           <td class="text-center">Rs.1200</td>
-                          
+
                           <td class="text-center">1</td>
                           <td class="text-center">Rs.1200</td>
                         </tr>
@@ -344,7 +390,7 @@
                             Ladies Square Half Plastic Black Sunglass
                           </td>
                           <td class="text-center">Rs.1200</td>
-                          
+
                           <td class="text-center">1</td>
                           <td class="text-center">Rs.1200</td>
                         </tr>
@@ -359,7 +405,7 @@
                             Ladies Square Half Plastic Black Sunglass
                           </td>
                           <td class="text-center">Rs.1200</td>
-                          
+
                           <td class="text-center">1</td>
                           <td class="text-center">Rs.1200</td>
                         </tr>
@@ -374,7 +420,7 @@
                             Ladies Square Half Plastic Black Sunglass
                           </td>
                           <td class="text-center">Rs.1200</td>
-                          
+
                           <td class="text-center">1</td>
                           <td class="text-center">Rs.1200</td>
                         </tr>
@@ -389,7 +435,7 @@
                             Ladies Square Half Plastic Black Sunglass
                           </td>
                           <td class="text-center">Rs.1200</td>
-                          
+
                           <td class="text-center">1</td>
                           <td class="text-center">Rs.1200</td>
                         </tr>
@@ -404,7 +450,7 @@
                             Ladies Square Half Plastic Black Sunglass
                           </td>
                           <td class="text-center">Rs.1200</td>
-                          
+
                           <td class="text-center">1</td>
                           <td class="text-center">Rs.1200</td>
                         </tr>
@@ -423,24 +469,24 @@
                   </div>
                   <div class="col-12">
                     <div class="col-12">
-                        <div class="pagination">
-                          <button class="btn-nav left-btn">
-                           <img src="img/pagination-left.png" alt="">
-                          </button>
-                          <div class="page-numbers">
-                            <button class="btn-page">1</button>
-                            <button class="btn-page">2</button>
-                            <button class="btn-page btn-selected">3</button>
-                            <button class="btn-page">4</button>
-                           
-                            <span class="dots">...</span>
-                            <button class="btn-page">150</button>
-                          </div>
-                          <button class="btn-nav right-btn">
-                            <img src="img/pagination-right.png" alt="">
-                          </button>
+                      <div class="pagination">
+                        <button class="btn-nav left-btn">
+                          <img src="img/pagination-left.png" alt="" />
+                        </button>
+                        <div class="page-numbers">
+                          <button class="btn-page">1</button>
+                          <button class="btn-page">2</button>
+                          <button class="btn-page btn-selected">3</button>
+                          <button class="btn-page">4</button>
+
+                          <span class="dots">...</span>
+                          <button class="btn-page">150</button>
                         </div>
+                        <button class="btn-nav right-btn">
+                          <img src="img/pagination-right.png" alt="" />
+                        </button>
                       </div>
+                    </div>
                   </div>
                 </section>
               </div>
@@ -586,6 +632,73 @@
         </div>
       </div>
     </footer>
+     <!-- mobile menu start  -->
+     <div class="side-bar">
+      <header>
+        <div class="close-btn">
+          <i class="fa fa-times"></i>
+        </div>
+      </header>
+      <div class="menu_mobile pt-3">
+       
+      
+        <div class="item">
+          <a class="d-flex justify-conten-between" href="product_list.html"
+            >Man Sunglassess
+            <div class="category_left-icon">
+              <img src="img/arrow_right.png" alt="" /></div
+          ></a>
+        </div>
+        <div class="item">
+          <a class="d-flex justify-conten-between" href="product_list.html"
+            >Kids Sunglassess
+            <div class="category_left-icon">
+              <img src="img/arrow_right.png" alt="" /></div
+          ></a>
+        </div>
+        <div class="item">
+          <a class="d-flex justify-conten-between" href="product_list.html"
+            >Polarized Sunglassess
+            <div class="category_left-icon">
+              <img src="img/arrow_right.png" alt="" /></div
+          ></a>
+        </div>
+        <div class="item">
+          <a class="d-flex justify-conten-between" href="product_list.html"
+            >Blue ray Cut
+            <div class="category_left-icon">
+              <img src="img/arrow_right.png" alt="" /></div
+          ></a>
+        </div>
+      
+        <div class="item">
+          <a class="d-flex justify-conten-between" href="product_list.html"
+            >Green Ray Cut
+            <div class="category_left-icon">
+              <img src="img/arrow_right.png" alt="" /></div
+          ></a>
+        </div>
+        <div class="item">
+          <a class="d-flex justify-conten-between" href="product_list.html"
+            >Woman Sunglassess
+            <div class="category_left-icon">
+              <img src="img/arrow_right.png" alt="" /></div
+          ></a>
+        </div>
+      
+       
+        <div class="item">
+          <a href="" class=""
+                ><img src="img/User.png" class="img-fluid" alt=""
+              />Login</a>
+        </div>
+      
+
+
+       
+      </div>
+    </div>
+    <!-- mobile menu end  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
