@@ -264,6 +264,17 @@
   color: white;
   transform: translate(-4px, 4px);
 }
+.call_icon img {
+  width: 32px;
+  filter: brightness(0) initial;
+  filter: brightness(0) invert(1);
+}
+.btn_wrapp a {
+
+
+  padding: 11px;
+ 
+}
 }
 @media (max-width: 767px) {
   .cart_coupon input {
@@ -400,17 +411,16 @@
     flex-direction: column;
   }
   .slider_block--headings h2 {
-    font-size: 35px;
-    line-height: 40px;
+    font-size: 30px;
+    line-height: 31px;
   }
   .slider_block--headings h1 {
-    font-size: 50px;
-    line-height: 60px;
+    font-size: 44px;
+    line-height: 50px;
   }
   .slider_block--headings p {
-    font-size: 18px;
-
-    line-height: 22px;
+    font-size: 17px;
+    line-height: 23px;
   }
   section.banner_home.p-0 .btn_wrapp {
     margin-top: 11px;
