@@ -1,4 +1,8 @@
-
+$(document).ready(function () {
+  $("#myModal").modal("show");
+});
+// notice end
+// modal end 
 
 
 $(document).ready(function () {

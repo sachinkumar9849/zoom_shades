@@ -21,6 +21,64 @@
       rel="stylesheet"
       type="text/css"
     />
+    <style>
+      .modal-body h1 {
+        font-weight: 900;
+        font-size: 2.3em;
+        text-transform: uppercase;
+      }
+      .modal-body a.pre-order-btn {
+        color: #000;
+        background-color: gold;
+        border-radius: 1em;
+        padding: 1em;
+        display: block;
+        margin: 2em auto;
+        width: 50%;
+        font-size: 1.25em;
+        font-weight: 6600;
+      }
+      .modal-body a.pre-order-btn:hover {
+        background-color: #000;
+        text-decoration: none;
+        color: gold;
+      }
+      div#myModal {
+        background: #670da6ed;
+        overflow: hidden;
+      }
+      .modal-dialog {
+        width: 100% !important;
+        min-width: 100%;
+      }
+      .wheel_text h1,
+      .wheel_text p {
+        color: white;
+      }
+      button.close_btn.close {
+        background: white;
+        opacity: 1;
+        border-radius: 50%;
+        min-width: 40px;
+        max-width: 40px;
+        max-height: 40px;
+        min-height: 40px;
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 22px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #630f9d;
+        z-index: 99;
+      }
+      .spin_title.modal-body.text-center.border-0 {
+        display: flex;
+        align-items: center;
+      }
+    </style>
   </head>
 
   <body>
@@ -1230,3 +1288,42 @@
     <script src="js/main.js"></script>
   </body>
 </html>
+<div id="myModal" class="modal fade" role="dialog">
+  <div
+    class="modal-dialog d-flex justify-content-center h-100 align-items-center m-auto"
+  >
+    <!-- Modal content-->
+    <div class="modal-content bg-transparent border-0 position-relative h-100">
+      <div class="modal-header border-0">
+        <button type="button" class="close_btn close" data-dismiss="modal">
+          &times;
+        </button>
+      </div>
+      <div class="spin_title modal-body text-center border-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              <div
+                class="wheel_text text-center d-flex flex-column justify-content-center align-items-center h-100"
+              >
+                <div class="mb-2">
+                  <h1>Spin to win</h1>
+                </div>
+                <p>
+                  In publishing and graphic design, Lorem ipsum is a placeholder
+                  text commonly used to demonstrate the visual form of a
+                  document or a typeface without relying on meaningful content.
+                  Lorem ipsum may be used as a placeholder before final copy is
+                  available.
+                </p>
+              </div>
+            </div>
+            <div class="col-6">
+              <img src="img/wheel.png" class="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
